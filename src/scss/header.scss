@@ -5,14 +5,24 @@
   left: 0;
   width: 100%;
   z-index: 20;
-  transition: all 0.3s;
+  transition: all 0.4s;
 	@include adaptiveValue("padding-top", 30, 16);
 	@include adaptiveValue("padding-bottom", 30, 16);
   padding-bottom: toRem(30);
   &._header-scroll {
-    background-color: rgba(19, 18, 18, 0.7);
+    transition: all 0.4s;
+    background-color: rgba(19, 18, 18, 0.8);
     padding-top: toRem(8);
     padding-bottom: toRem(8);
+    .header__logo{
+      img {
+        transition: all 0.4s;
+        width: toRem(50);
+      }
+    }
+    .header__button{
+      padding: toRem(6) toRem(16);
+    }
   }
   // .header__container
   &__container {
@@ -23,7 +33,8 @@
   &__logo {
     flex: 1 1 auto;
     img {
-      width: toRem(96);
+      transition: all 0.4s;
+      @include adaptiveValue("width", 96, 56);
       height: 100%;
     }
   }

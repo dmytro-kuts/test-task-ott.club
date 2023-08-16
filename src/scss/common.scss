@@ -1,7 +1,7 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
 .page {
-  padding-top: toRem(148);
+  @include adaptiveValue("padding-top", 148, 100);
 
   // .page__channel
 
@@ -35,8 +35,8 @@
   }
 }
 //========================================================================================================================================================
-//? animation slide-in-bottom-100
-%slide-in-bottom-100 {
+//? animation slide-in-bottom-50
+%slide-in-bottom-50 {
   transform: translate(0px, toRem(50));
   opacity: 0;
   transition: all 0.3s ease 0s;

@@ -5,7 +5,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: toRem(16) toRem(20);
+  @include adaptiveValue('padding-top', 16, 9);
+  @include adaptiveValue('padding-bottom', 16, 9);
+  padding-left: toRem(20);
+  padding-right: toRem(20);
   border-radius: toRem(5);
   transition: all 0.3s;
   font-weight: 600;
@@ -40,7 +43,6 @@
     line-height: 140%;
     border: toRem(2) solid rgba(255, 255, 255, 0);
     background-color: $redColor;
-
   }
   &--fw {
     width: 100%;

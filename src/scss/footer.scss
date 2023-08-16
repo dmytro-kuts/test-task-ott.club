@@ -209,6 +209,11 @@
         transform: rotate(360deg);
       }
     }
+    img {
+      @include adaptiveValue('max-width', 40, 32);
+      width: 100%;
+      height: fit-content;
+    }
   }
 }
 //========================================================================================================================================================
@@ -222,7 +227,6 @@
       opacity: 0;
       transition: all 0.3s ease 0s;
     }
-  
     &._watcher-view {
       img {
         transform: translate(0px, 0);
@@ -273,8 +277,8 @@
   }
   // .row-icons__image--hidden
   &__image--hidden {
-    @media (max-width: toRem(375)) {
-      display: none;
+    @media (max-width:$mobileSmall){
+        display: none;
     }
   }
 }
