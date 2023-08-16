@@ -1423,8 +1423,6 @@ textarea.input {
       -ms-transform: translate(0px, 0);
           transform: translate(0px, 0);
   opacity: 1;
-  -webkit-transition: all 0.8s ease 0.2s;
-  transition: all 0.8s ease 0.2s;
 }
 
 .content-device-view__title:not(:last-child) {
@@ -1445,8 +1443,6 @@ textarea.input {
       -ms-transform: translate(0px, 0);
           transform: translate(0px, 0);
   opacity: 1;
-  -webkit-transition: all 0.8s ease 0.4s;
-  transition: all 0.8s ease 0.4s;
 }
 
 .content-device-view__text:not(:last-child) {
@@ -1467,8 +1463,6 @@ textarea.input {
       -ms-transform: translate(0px, 0);
           transform: translate(0px, 0);
   opacity: 1;
-  -webkit-transition: all 0.8s ease 0.6s;
-  transition: all 0.8s ease 0.6s;
 }
 
 .content-device-view__button {
@@ -1716,6 +1710,21 @@ textarea.input {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .content-device-view__title._watcher-view {
+    -webkit-transition: all 0.8s ease 0.2s;
+    transition: all 0.8s ease 0.2s;
+  }
+
+  .content-device-view__text._watcher-view {
+    -webkit-transition: all 0.8s ease 0.4s;
+    transition: all 0.8s ease 0.4s;
+  }
+
+  .content-device-view__action._watcher-view {
+    -webkit-transition: all 0.8s ease 0.6s;
+    transition: all 0.8s ease 0.6s;
+  }
+
   .image-device-view__img {
     position: absolute;
     min-width: 100%;
@@ -1798,10 +1807,6 @@ textarea.input {
 @media (min-width: 91.875em) {
   .device-view__body {
     padding-bottom: 5rem;
-  }
-
-  .device-view__body {
-    gap: 6rem;
   }
 
   .image-device-view__img {
@@ -1992,10 +1997,6 @@ textarea.input {
 
   .device-view__body {
     padding-bottom: 1.6875rem;
-  }
-
-  .device-view__body {
-    gap: 2.5rem;
   }
 
   .content-device-view__button {
@@ -2295,6 +2296,21 @@ textarea.input {
   .device-view__body {
     -ms-grid-rows: auto 1fr;
     grid-template-rows: auto 1fr;
+  }
+
+  .content-device-view__title._watcher-view {
+    -webkit-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+  }
+
+  .content-device-view__text._watcher-view {
+    -webkit-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+  }
+
+  .content-device-view__action._watcher-view {
+    -webkit-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
   }
 
   .content-device-view__button {
