@@ -1309,7 +1309,8 @@ textarea.input {
 }
 
 .body-tabs__item img {
-  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
 }
 
 .body-tabs__item--red {
