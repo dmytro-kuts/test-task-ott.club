@@ -1289,7 +1289,6 @@ textarea.input {
 .channel__container::before {
   content: "";
   position: absolute;
-  left: -10%;
   top: 0;
   height: 62.5rem;
   min-width: 100%;
@@ -1713,6 +1712,10 @@ textarea.input {
 
   .form__button {
     border-radius: 0rem 0.375rem 0.375rem 0rem;
+  }
+
+  .channel__container::before {
+    left: -10%;
   }
 
   .device-view__body {
@@ -2325,6 +2328,10 @@ textarea.input {
 
   .channel__container {
     text-align: center;
+  }
+
+  .channel__container::before {
+    left: 0;
   }
 
   .body-tabs__items {
