@@ -1133,6 +1133,9 @@ textarea.input {
 
 .price__icon img {
   width: 4.5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .price__list {
@@ -1183,6 +1186,14 @@ textarea.input {
 
 .column-price__icon:not(:last-child) {
   margin-bottom: 1.25rem;
+}
+
+.column-price__icon img {
+  max-width: 4.875rem;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .column-price__icon span {
@@ -1278,6 +1289,13 @@ textarea.input {
   top: -1.25rem;
 }
 
+.channel__title span img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .channel__text {
   line-height: 150%;
   opacity: 0.7;
@@ -1311,6 +1329,9 @@ textarea.input {
 .body-tabs__item img {
   max-width: 100%;
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .body-tabs__item--red {
@@ -1468,6 +1489,12 @@ textarea.input {
   transition: all 0.8s ease 0s;
 }
 
+.image-device-view__img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .platform-view {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1572,6 +1599,7 @@ textarea.input {
 }
 
 .platform-view__image {
+  height: 100%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1887,6 +1915,10 @@ textarea.input {
     padding-bottom: 3.5625rem;
   }
 
+  .channel__title span img {
+    max-width: 3.125rem;
+  }
+
   .channel__text:not(:last-child) {
     margin-bottom: 3.125rem;
   }
@@ -2093,6 +2125,10 @@ textarea.input {
 
   .channel__container {
     padding-bottom: 2.5rem;
+  }
+
+  .channel__title span img {
+    max-width: 2.5rem;
   }
 
   .channel__text:not(:last-child) {
@@ -2649,6 +2685,18 @@ textarea.input {
 @supports not (padding-bottom: clamp( 2.5rem , 2.2098976109rem  +  1.4505119454vw , 3.5625rem )) {
     .channel__container {
       padding-bottom: calc(2.5rem + 1.0625 * (100vw - 20rem) / 73.25);
+    }
+}
+
+@supports (max-width: clamp( 2.5rem , 2.3293515358rem  +  0.8532423208vw , 3.125rem )) {
+    .channel__title span img {
+      max-width: clamp( 2.5rem , 2.3293515358rem  +  0.8532423208vw , 3.125rem );
+    }
+}
+
+@supports not (max-width: clamp( 2.5rem , 2.3293515358rem  +  0.8532423208vw , 3.125rem )) {
+    .channel__title span img {
+      max-width: calc(2.5rem + 0.625 * (100vw - 20rem) / 73.25);
     }
 }
 
