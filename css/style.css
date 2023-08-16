@@ -949,6 +949,13 @@ textarea.input {
   transition: all 0.4s;
 }
 
+.social-column-footer__item img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .icons-footer__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1863,6 +1870,10 @@ textarea.input {
     margin-bottom: 3.125rem;
   }
 
+  .social-column-footer__item img {
+    max-width: 2.5rem;
+  }
+
   .icons-footer__row--pay .row-icons__image {
     height: 2.5rem;
   }
@@ -2073,6 +2084,10 @@ textarea.input {
 
   .column-footer__list:not(:last-child) {
     margin-bottom: 1rem;
+  }
+
+  .social-column-footer__item img {
+    max-width: 2rem;
   }
 
   .icons-footer__row--pay .row-icons__image {
@@ -2529,6 +2544,18 @@ textarea.input {
 @supports not (margin-bottom: clamp( 1rem , 0.4197952218rem  +  2.9010238908vw , 3.125rem )) {
     .column-footer__list:not(:last-child) {
       margin-bottom: calc(1rem + 2.125 * (100vw - 20rem) / 73.25);
+    }
+}
+
+@supports (max-width: clamp( 2rem , 1.8634812287rem  +  0.6825938567vw , 2.5rem )) {
+    .social-column-footer__item img {
+      max-width: clamp( 2rem , 1.8634812287rem  +  0.6825938567vw , 2.5rem );
+    }
+}
+
+@supports not (max-width: clamp( 2rem , 1.8634812287rem  +  0.6825938567vw , 2.5rem )) {
+    .social-column-footer__item img {
+      max-width: calc(2rem + 0.5 * (100vw - 20rem) / 73.25);
     }
 }
 
