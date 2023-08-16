@@ -6,13 +6,15 @@
 	"private": true,
 	"license": "",
 	"type": "module",
+	"homepage": "https://dmytro-kuts.github.io/test-task-ott.club/",
 	"scripts": {
 		"start": "npm i --legacy-peer-deps",
 		"dev": "gulp && webpack serve --progress -c config/webpack.dev.js",
 		"build": "gulp build --build",
 		"sprite": "gulp sprite",
 		"fonts": "gulp fonts --rewrite",
-		"deploy": "gulp deployFTP --build",
+		"deploy": "gh-pages -d dist",
+		"predeploy": "npm run build",
 		"zip": "gulp deployZIP --build",
 		"devbuild": "gulp build --build --nowebp",
 		"noimgbuild": "gulp build --build --noimgopt",
@@ -20,11 +22,22 @@
 		"bem": "fls-bemtree-from-html"
 	},
 	"devDependencies": {
+		"@babel/cli": "latest",
+		"@babel/core": "latest",
+		"@babel/preset-react": "latest",
 		"@types/isotope-layout": "^3.0.9",
+		"@types/react": "^18.0.28",
+		"@types/react-dom": "^18.0.11",
+		"babel-loader": "latest",
 		"copy-webpack-plugin": "latest",
 		"css-loader": "latest",
 		"del": "latest",
+		"eslint": "latest",
+		"eslint-plugin-react": "latest",
+		"eslint-plugin-react-hooks": "latest",
+		"eslint-plugin-react-refresh": "latest",
 		"file-include-webpack-plugin-replace": "latest",
+		"gh-pages": "^6.0.0",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
 		"gulp-clean-css": "latest",
@@ -70,23 +83,13 @@
 		"webpack": "latest",
 		"webpack-cli": "latest",
 		"webpack-dev-server": "latest",
-		"webpack-stream": "latest",
-		"@types/react": "^18.0.28",
-		"@types/react-dom": "^18.0.11",
-		"eslint": "latest",
-		"eslint-plugin-react": "latest",
-		"eslint-plugin-react-hooks": "latest",
-		"eslint-plugin-react-refresh": "latest",
-		"@babel/cli": "latest",
-		"@babel/core": "latest",
-		"@babel/preset-react": "latest",
-		"babel-loader": "latest"
+		"webpack-stream": "latest"
 	},
 	"dependencies": {
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",
-		"simplebar": "latest",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"simplebar": "latest"
 	}
 }
