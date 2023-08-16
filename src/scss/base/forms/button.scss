@@ -1,0 +1,48 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: toRem(16) toRem(20);
+  border-radius: toRem(5);
+  transition: all 0.3s;
+  font-weight: 600;
+  line-height: 140%;
+  @media (any-hover: hover) {
+    &:hover {
+      &.button--border {
+        background-color: rgba(255, 31, 31, 0.6);
+        border: toRem(2) solid rgba(255, 255, 255, 0);
+      }
+      &.button--inherit {
+        opacity: 1;
+        border: toRem(2) solid $redColor;
+        color: $redColor;
+      }
+      &.button--red {
+        opacity: 1;
+        border: toRem(2) solid $mainColor;
+      }
+    }
+  }
+  &--border {
+    min-width: toRem(124);
+    border: toRem(2) solid $mainColor;
+  }
+  &--inherit {
+    opacity: 0.8;
+    border: toRem(2) solid rgba(255, 255, 255, 0);
+  }
+  &--red {
+    font-weight: 600;
+    line-height: 140%;
+    border: toRem(2) solid rgba(255, 255, 255, 0);
+    background-color: $redColor;
+
+  }
+  &--fw {
+    width: 100%;
+  }
+}

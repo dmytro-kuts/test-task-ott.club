@@ -1,0 +1,107 @@
+// Базові стилі спойлерів
+// Сніппет (HTML): spoller
+
+// Блок зі спойлерами
+.spollers {
+  display: grid;
+  gap: toRem(15);
+  justify-items: start;
+}
+
+.spollers__column {
+  width: 100%;
+  details {
+    transform: translate(0, toRem(100));
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+  }
+  &._watcher-view {
+    details {
+      transform: translate(0px, 0);
+      opacity: 1;
+      @for $var from 1 to 16 {
+        $delay: $var * 0.2;
+        &:nth-child(#{$var}) {
+          @if $var==1 {
+            transition: all 0.8s ease 0.2s;
+          } @else {
+            transition: all 0.8s ease #{$delay + s};
+          }
+        }
+      }
+    }
+  }
+  // .spollers__column--1
+  &--1 {
+    .spollers__item {
+      @media (min-width: em(660)) {
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+      }
+      @media (max-width: em(660)) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+  // .spollers__column--2
+  &--2 {
+    .spollers__item {
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
+
+// Спойлер
+.spollers__item {
+  @include adaptiveValue('padding-bottom', 40, 20);
+  @include adaptiveValue('min-height', 110, 90, 2, 1460, 660);
+  &:not(:last-child) {
+    @include adaptiveValue('margin-bottom', 32, 20);
+  }
+}
+// Заголовок спойлера
+.spollers__title {
+  @include adaptiveValue('font-size', 24, 16);
+  font-weight: 400;
+  line-height: 140%;
+  width: 100%;
+  cursor: default;
+  text-align: left;
+  position: relative;
+  list-style: none;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: start;
+  gap: toRem(40);
+  span {
+    @include adaptiveValue('max-width', 530, 360, 0, 1460, 768);
+  }
+  &::marker {
+  }
+  ._spoller-init & {
+    cursor: pointer;
+    &::before {
+      margin-top: toRem(13);
+      transition: all 0.3s;
+      font-size: toRem(5);
+    }
+    &._spoller-active {
+      &::before {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+// Контент спойлера
+.spollers__body {
+  padding-top: toRem(20);
+  opacity: 0.7;
+  @include adaptiveValue('font-size', 20, 14);
+  line-height: 150%;
+}

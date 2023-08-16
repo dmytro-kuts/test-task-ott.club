@@ -1,0 +1,72 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  // .tabs__navigation
+  &__navigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: toRem(24);
+    overflow: auto;
+    gap: toRem(30);
+    @include adaptiveValue('gap', 30, 8);
+    justify-content: space-between;
+  }
+  // .tabs__title
+  &__title {
+    border: toRem(2) solid #eee;
+    padding: toRem(16) toRem(24);
+    border-radius: toRem(5);
+		transition: border 0.3s;
+		@media (any-hover: hover){
+			&:hover{
+				border: toRem(2) solid $redColor;
+			}
+		}
+    &._tab-active {
+      border: toRem(2) solid $redColor;
+      background-color: $redColor;
+    }
+  }
+  // .tabs__content
+  &__content {
+    padding-bottom: toRem(24);
+  }
+  // .tabs__body
+  &__body {
+  }
+
+  // .tabs__button
+
+  &__button {
+    align-self: end;
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: toRem(16);
+    text-transform: uppercase;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: toRem(1);
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s;
+      background-color: $mainColor;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    span {
+      &::before {
+        font-size: toRem(4);
+        color: $redColor;
+      }
+    }
+  }
+}

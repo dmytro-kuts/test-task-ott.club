@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"OTTCLUB || Онлайн телевидение через Интернет" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="page__view device-view device-view--bg">
+          <div class="device-view__container">
+            <div class="device-view__body">
+              <div class="device-view__content content-device-view">
+                <h1 class="content-device-view__title title" data-watch>
+                  Более 270 телеканалов в прямом эфире
+                </h1>
+                <div class="content-device-view__text text" data-watch>
+                  <p>
+                    Национальные, познавательные, детские, кино, спортивные, новостные и многие
+                    другие каналы
+                  </p>
+                </div>
+                <div class="content-device-view__action" data-watch>
+                  <a href="#" class="content-device-view__button button button--red">
+                    Протестировать 7 дней бесплатно
+                  </a>
+                </div>
+              </div>
+              <div class="device-view__image image-device-view" data-watch>
+                <img
+                  src="@img/section/view/header-right-picture.png"
+                  alt="header-right-picture"
+                  class="image-device-view__img"
+                />
+              </div>
+            </div>
+            <div class="device-view__advantages advantages" data-watch>
+              <article class="advantages__item item-advantages">
+                <div class="item-advantages__icon">
+                  <img src="@img/section/view/advantages/gift.svg" alt="Gift" />
+                </div>
+                <div class="item-advantages__body">
+                  <h3 class="item-advantages__title">Бесплатный тест</h3>
+                  <div class="item-advantages__text">
+                    <p>7 дней бесплатного тестового просмотра</p>
+                  </div>
+                </div>
+              </article>
+              <article class="advantages__item item-advantages">
+                <div class="item-advantages__icon">
+                  <img src="@img/section/view/advantages/device.svg" alt="Device" />
+                </div>
+                <div class="item-advantages__body">
+                  <h3 class="item-advantages__title">5 устройств = 1 подписка</h3>
+                  <div class="item-advantages__text">
+                    <p>Подключайте 5 устройств в одной подписке</p>
+                  </div>
+                </div>
+              </article>
+              <article class="advantages__item item-advantages">
+                <div class="item-advantages__icon">
+                  <img src="@img/section/view/advantages/tv.svg" alt="TV" />
+                </div>
+                <div class="item-advantages__body">
+                  <h3 class="item-advantages__title">Архив трансляций</h3>
+                  <div class="item-advantages__text">
+                    <p>Смотрите 7 дней телеэфира в записи</p>
+                  </div>
+                </div>
+              </article>
+              <article class="advantages__item item-advantages">
+                <div class="item-advantages__icon">
+                  <img src="@img/section/view/advantages/planet-earth.svg" alt="Planet Earth" />
+                </div>
+                <div class="item-advantages__body">
+                  <h3 class="item-advantages__title">Без привязки к месту</h3>
+                  <div class="item-advantages__text">
+                    <p>Смотрите любимые фильмы и передачи в любой точке мира</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="page__price price">
+          <div class="price__container">
+            <div class="price__body" data-watch>
+              <div class="price__content">
+                <div class="price__column column-price">
+                  <div class="column-price__icon">
+                    <img data-src="@img/section/price/1€.svg" alt="1€" />
+                    <span>/ МЕСЯЦ</span>
+                  </div>
+                  <div class="column-price__text">
+                    <p>Покупая подписку более, чем на 6 месяцев</p>
+                  </div>
+                </div>
+
+                <ul class="price__list">
+                  <li class="price__item _icon-arrow">Более 270 каналов</li>
+                  <li class="price__item _icon-arrow">127 FullHD каналов</li>
+                  <li class="price__item _icon-arrow">Режим Ultra TV Sport</li>
+                  <li class="price__item _icon-arrow">Архив каналовt</li>
+                  <li class="price__item _icon-arrow">5 устройств</li>
+                </ul>
+              </div>
+
+              <form class="price__form form" action="files/sendmail/sendmail.php" method="POST">
+                <input
+                  type="text"
+                  name="form[email]"
+                  data-required="email"
+                  data-validate
+                  data-error="Error Email"
+                  placeholder="Email"
+                  class="form__input input"
+                />
+                <button type="submit" class="form__button button button--red">
+                  Подключить тариф
+                </button>
+              </form>
+
+              <div class="price__icon">
+                <img src="@img/section/price/eye.png" alt="Eye" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page__channel channel">
+          <div class="channel__container">
+            <h2 class="channel__title title" data-watch>
+              ТВ - каналы
+              <span><img src="@img/section/channel/lightning.svg" alt="lightning" /></span>
+            </h2>
+            <div class="channel__text" data-watch>
+              <p>
+                Национальные, познавательные, детские, кино, спортивные, новостные и многие другие
+                телеканалы
+              </p>
+            </div>
+            <div data-tabs data-tabs-animate class="channel__tabs tabs" data-watch>
+              <nav data-tabs-titles class="tabs__navigation">
+                <button type="button" class="tabs__title _tab-active">Популярные</button>
+                <button type="button" class="tabs__title">Национальные</button>
+                <button type="button" class="tabs__title">Познавательные</button>
+
+                <button type="button" class="tabs__title">Кино</button>
+                <button type="button" class="tabs__title">Спорт</button>
+                <button type="button" class="tabs__title">Детские</button>
+                <button type="button" class="tabs__title">Музыкальные</button>
+                <button type="button" class="tabs__title">Новостные</button>
+              </nav>
+              <div data-tabs-body class="tabs__content">
+                <div class="tabs__body body-tabs">
+                  <div class="body-tabs__items">
+                    <div class="body-tabs__item body-tabs__item--red">
+                      <img data-src="@img/section/channel/1+1.png" alt="1+1" />
+                    </div>
+                    <div class="body-tabs__item body-tabs__item--blue">
+                      <img data-src="@img/section/channel/zoom.png" alt="zoom" />
+                    </div>
+                    <div class="body-tabs__item body-tabs__item--green">
+                      <img data-src="@img/section/channel/ukrain.png" alt="ukrain" />
+                    </div>
+                    <div class="body-tabs__item body-tabs__item--purple">
+                      <img data-src="@img/section/channel/film.png" alt="film" />
+                    </div>
+                    <div class="body-tabs__item body-tabs__item--yellow">
+                      <img data-src="@img/section/channel/tet.png" alt="tet" />
+                    </div>
+                    <div class="body-tabs__item body-tabs__item--blue">
+                      <img data-src="@img/section/channel/inter.png" alt="inter" />
+                    </div>
+                    <div class="body-tabs__item body-tabs__item--green">
+                      <img data-src="@img/section/channel/noviy.png" alt="noviy" />
+                    </div>
+                    <div class="body-tabs__item body-tabs__item--purple">
+                      <img data-src="@img/section/channel/istv.png" alt="istv" />
+                    </div>
+                    <div class="body-tabs__item body-tabs__item--green">
+                      <img data-src="@img/section/channel/m1.png" alt="m1" />
+                    </div>
+                    <div class="body-tabs__item body-tabs__item--purple">
+                      <img data-src="@img/section/channel/2+2.png" alt="2+2" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__body">
+                  <div class="body-tabs__items">
+                    <div class="body-tabs__item body-tabs__item--purple">
+                      <img data-src="@img/section/channel/istv.png" alt="istv" />
+                    </div>
+                    <div class="body-tabs__item body-tabs__item--purple">
+                      <img data-src="@img/section/channel/istv.png" alt="istv" />
+                    </div>
+                    <div class="body-tabs__item body-tabs__item--purple">
+                      <img data-src="@img/section/channel/istv.png" alt="istv" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__body">
+                  <div class="body-tabs__items">
+                    <div class="body-tabs__item body-tabs__item--purple">
+                      <img data-src="@img/section/channel/film.png" alt="istv" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__body">
+                  <div class="body-tabs__items">
+                    <div class="body-tabs__item body-tabs__item--purple">
+                      <img data-src="@img/section/channel/film.png" alt="istv" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__body">
+                  <div class="body-tabs__items">
+                    <div class="body-tabs__item body-tabs__item--purple">
+                      <img data-src="@img/section/channel/m1.png" alt="istv" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__body">
+                  <div class="body-tabs__items">
+                    <div class="body-tabs__item body-tabs__item--purple">
+                      <img data-src="@img/section/channel/inter.png" alt="istv" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__body">
+                  <div class="body-tabs__items">
+                    <div class="body-tabs__item body-tabs__item--purple">
+                      <img data-src="@img/section/channel/istv.png" alt="istv" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__body">
+                  <div class="body-tabs__items">
+                    <div class="body-tabs__item body-tabs__item--purple">
+                      <img data-src="@img/section/channel/2+2.png" alt="2+2" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="tabs__button">
+                Показать все <span class="_icon-arrow-down"></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="page__device-view device-view">
+          <div class="device-view__container">
+            <div class="device-view__body">
+              <div class="device-view__content content-device-view">
+                <h2 class="content-device-view__title title" data-watch>
+                  Смотрите на разных устройствах
+                </h2>
+                <div class="content-device-view__text text" data-watch>
+                  <p>
+                    Подключайте подписку FULL и смотрите любимые каналына 5 устройствах, среди
+                    которых: телевизор, компьютер, планшет или смартфон
+                  </p>
+                </div>
+                <div class="content-device-view__action" data-watch>
+                  <a href="#" class="content-device-view__button button button--red">
+                    Протестировать 7 дней бесплатно
+                  </a>
+                </div>
+              </div>
+              <div class="device-view__image image-device-view" data-watch>
+                <img
+                  data-src="@img/section/device-view/devices.png"
+                  alt="iPad"
+                  class="image-device-view__img"
+                />
+              </div>
+            </div>
+            <div class="device-view__platform platform-view" data-watch>
+              <img
+                data-src="@img/section/device-view/platform-view/lg.svg"
+                alt="LG"
+                class="platform-view__image"
+              />
+              <img
+                data-src="@img/section/device-view/platform-view/ios.svg"
+                alt="iOS"
+                class="platform-view__image"
+              />
+              <img
+                data-src="@img/section/device-view/platform-view/android-tv.svg"
+                alt="AndroidTV"
+                class="platform-view__image"
+              />
+              <img
+                data-src="@img/section/device-view/platform-view/samsung.svg"
+                alt="SmartTV"
+                class="platform-view__image"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="page__popular-questions popular-questions">
+          <div class="popular-questions__container">
+            <h2 class="popular-questions__title title" data-watch>Популярные вопросы</h2>
+            <div data-spollers class="popular-questions__spollers spollers">
+              <div class="spollers__column spollers__column--1" data-watch>
+                <details class="spollers__item">
+                  <summary class="spollers__title _icon-arrow-down">
+                    <span>Как подключить подписку OTTCLUB или продлить ее?</span>
+                  </summary>
+                  <div class="spollers__body">
+                    Какая необходима скорость соединения для стабильного просмотра каналов? Какая
+                    необходима скорость соединения для стабильного просмотра каналов?
+                  </div>
+                </details>
+                <details class="spollers__item">
+                  <summary class="spollers__title _icon-arrow-down">
+                    <span>Как смотреть одновременно на разных устройствах?</span>
+                  </summary>
+                  <div class="spollers__body">
+                    Какая необходима скорость соединения для стабильного просмотра каналов? Какая
+                    необходима скорость соединения для стабильного просмотра каналов?
+                  </div>
+                </details>
+                <details class="spollers__item">
+                  <summary class="spollers__title _icon-arrow-down">
+                    <span>Какая скорость соединения необходима для просмотра каналов?</span>
+                  </summary>
+                  <div class="spollers__body">
+                    Какая необходима скорость соединения для стабильного просмотра каналов? Какая
+                    необходима скорость соединения для стабильного просмотра каналов?
+                  </div>
+                </details>
+              </div>
+              <div class="spollers__column spollers__column--2" data-watch>
+                <details class="spollers__item">
+                  <summary class="spollers__title _icon-arrow-down">
+                    <span>Как смотреть на телевизоре Samsung?</span>
+                  </summary>
+                  <div class="spollers__body">
+                    Какая необходима скорость соединения для стабильного просмотра каналов? Какая
+                    необходима скорость соединения для стабильного просмотра каналов?
+                  </div>
+                </details>
+                <details class="spollers__item">
+                  <summary class="spollers__title _icon-arrow-down">
+                    <span>Как посмотреть передачу, которая была в эфире ранее?</span>
+                  </summary>
+                  <div class="spollers__body">
+                    Какая необходима скорость соединения для стабильного просмотра каналов? Какая
+                    необходима скорость соединения для стабильного просмотра каналов?
+                  </div>
+                </details>
+                <details class="spollers__item">
+                  <summary class="spollers__title _icon-arrow-down">
+                    <span>Как работает бесплатный тестовый период?</span>
+                  </summary>
+                  <div class="spollers__body">
+                    Какая необходима скорость соединения для стабильного просмотра каналов? Какая
+                    необходима скорость соединения для стабильного просмотра каналов?
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>
