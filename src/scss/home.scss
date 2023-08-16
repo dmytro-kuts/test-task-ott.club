@@ -198,15 +198,22 @@
     &::before {
       content: '';
       position: absolute;
-      left: -10%;
       top: 0;
       height: toRem(1000);
       min-width: 100%;
       background: url('@img/section/channel/web.svg') 0 0 no-repeat;
       z-index: -1;
     }
+    @media (min-width: $mobile) {
+      &::before {
+        left: -10%;
+      }
+    }
     @media (max-width: $mobile) {
       text-align: center;
+      &::before {
+        left: 0;
+      }
     }
   }
   // .channel__title
