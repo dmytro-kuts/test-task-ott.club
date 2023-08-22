@@ -87,10 +87,10 @@
     display: flex;
     align-items: center;
     gap: toRem(20);
-    @include adaptiveValue('font-size', 26, 16);
+    @include adaptiveValue('font-size', 26, 15);
     &::before {
       color: #eec63b;
-      font-size: toRem(10);
+      @include adaptiveValue('font-size', 12, 8);
     }
   }
   // .price__form
@@ -421,7 +421,7 @@
       }
     }
     &:not(:last-child) {
-      margin-bottom: em(60, 20);
+      @include adaptiveValue("margin-bottom", 60, 20);
     }
   }
 
@@ -450,10 +450,14 @@
   // .content-device-view__button
   &__button {
     max-width: fit-content;
-    @include adaptiveValue('font-size', 26, 16, 0, 1462, 768);
+    @include adaptiveValue('font-size', 26, 17, 0, 1462, 768);
+
     @media (max-width: $mobile) {
       min-width: 100%;
-      font-size: toRem(14);
+      font-size: toRem(16);
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: toRem(15);
     }
   }
 }

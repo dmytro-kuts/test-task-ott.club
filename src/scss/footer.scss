@@ -112,7 +112,7 @@
   // .content-footer__column
   &__column {
     @media (min-width: $mobile) {
-      max-width: toRem(220);
+      max-width: toRem(230);
     }
     @media (max-width: $tablet) {
       width: 100%;
@@ -144,9 +144,12 @@
     flex-direction: column;
     align-items: start;
     text-align: left;
-    gap: toRem(10);
+    
     &:not(:last-child) {
       @include adaptiveValue('margin-bottom', 50, 16);
+    }
+    @media (min-width:$mobile){
+      gap: toRem(10);
     }
   }
   // .column-footer__item
@@ -277,7 +280,7 @@
   }
   // .row-icons__image--hidden
   &__image--hidden {
-    @media (max-width:$mobileSmall){
+    @media (max-width:$mobile){
         display: none;
     }
   }

@@ -7,8 +7,7 @@
   justify-content: center;
   @include adaptiveValue('padding-top', 16, 9);
   @include adaptiveValue('padding-bottom', 16, 9);
-  padding-left: toRem(20);
-  padding-right: toRem(20);
+
   border-radius: toRem(5);
   transition: all 0.3s;
   font-weight: 600;
@@ -31,14 +30,22 @@
     }
   }
   &--border {
-    min-width: toRem(124);
+    @include adaptiveValue('padding-left', 33.5, 24);
+    @include adaptiveValue('padding-right', 33.5, 24);
+    min-width: toRem(127);
     border: toRem(2) solid $mainColor;
   }
   &--inherit {
+    padding-left: toRem(24);
+    padding-right: toRem(24);
     opacity: 0.8;
     border: toRem(2) solid rgba(255, 255, 255, 0);
   }
   &--red {
+    @include adaptiveValue('padding-top', 24, 14);
+    @include adaptiveValue('padding-bottom', 24, 14);
+    @include adaptiveValue('padding-left', 40, 14);
+    @include adaptiveValue('padding-right', 40, 14);
     font-weight: 600;
     line-height: 140%;
     border: toRem(2) solid rgba(255, 255, 255, 0);
